@@ -1,52 +1,48 @@
-# Inverse-kinematic-modeling-using-robo-analyzer-
+# Forward-kinematics-using-robo-analyzer
 
- 
 ## AIM: 
-To analyze the inverse kinematics using DH parameters for a 3 dof planer and 3 dof articulated robot using roboanalyzer and polt the graph of joint angle for a given  input end effector position .
-
-
+To analyze the forward kinematics using DH paramerters for a 4 and 6 dof robot using roboanalyzer and polt the graph for link cordinates and joint angles
 ### COMPONENTS REQUIRED:
 1.Robo analyzer software  
 
 
 ### THEORY: 
   
-### Inverse Kinematics
+Forward Kinematics
+
+A manipulator is composed of serial links which are affixed to each other revolute or prismatic joints from the base frame through the endeffector. 
+Calculating the position and orientation of the endeffector in terms of the joint variables is called as forward kinematics. 
+In order to have forward kinematics for a robot mechanism in a systematic manner, one should use a suitable kinematics model. 
+Denavit-Hartenberg method that uses four parameters is the most common method for describing the robot kinematics. 
+These parameters ai1, α −,1idi and θ the link length, link twist, link offset and joint angle, respectively. 
+A coordinate frame is attached to each joint to determine DH parameters. Zi axis of the coordinate frame is pointing along the rotary or sliding direction general manipulator.
+
+Denavit Hartenberg Parameters
+With DH Parameters, solving for the Forward Kinematics is easy.  only need to take four parameters for each joint 
+i: θifor the joint angle, 
+αi for the link twist, 
+difor the link offset, and 
+ai for the link length. Once I’ve obtained them, I can just plug them in to this transformation matrix:
+
+
+![image](https://user-images.githubusercontent.com/36288975/170172719-ed7befc9-2894-4344-bfd5-be831bb05308.png)
+
+ ![image](https://user-images.githubusercontent.com/36288975/170172766-b8aeb788-7fd7-4de7-b340-f04656707ebd.png)
+
  
 
-Inverse kinematics is the use of kinematic equations to determine the motion of a robot to reach a desired position. For example, to perform automated bin picking, a robotic arm used in a manufacturing line needs precise motion from an initial position to a desired position between bins and manufacturing machines. The grasping end of a robot arm is designated as the end-effector. The robot configuration is a list of joint positions that are within the position limits of the robot model and do not violate any constraints the robot has.
-
- Most industrial robots are constructed of several independently controllable articulated joints. Each joint is connected to one or more of the other joints, sometimes in complex configurations. The end effector is attached at the end of the entire “kinematic chain”. When you move any one joint, this will affect the end effector’s pose in various ways.
-
-This means that there is no simple, direct relationship between the end effector position and any one particular joint.
-
-For example, if you want the robot’s end effector to move 1 mm linearly along the Z-axis, you may need to move all of the joints by a different amount.
-
-Finally, inverse kinematics algorithms calculate the exact position of each of the robot’s joints required to reach your desired end effector pose.
-
-### solving inverse kinematic model 
-![image](https://user-images.githubusercontent.com/36288975/170622829-3fe97ef7-8ef1-44af-afae-b0954871aa0c.png)
-
-
-![image](https://user-images.githubusercontent.com/36288975/170622902-f48fd9c7-f2ec-4fd5-904b-ea51be8298c3.png)
-
-![image](https://user-images.githubusercontent.com/36288975/170622934-a3fd7f77-7eb2-4408-b66d-d6e3adbd1f99.png)
-
-![image](https://user-images.githubusercontent.com/36288975/170622982-9c4d8b23-1563-4e17-9616-87bcc4f4501d.png)
-![image](https://user-images.githubusercontent.com/36288975/170623020-f27efc12-bb58-4f62-840d-af544ac6689e.png)
-
 ### PROCEDURE:
-1. Open the RoboAnalyzer App:
-![image](https://github.com/srvasanthan33/Inverse-kinematic-modeling-using-robo-analyzer-/assets/102546622/e5bb8915-894c-4b5f-bd1e-430a51a49b57)
-2. Change the DOF to threee:
-![image](https://github.com/srvasanthan33/Inverse-kinematic-modeling-using-robo-analyzer-/assets/102546622/87f0a2b9-ac10-4d80-bdda-4782a5d36eed)
-3. Open Ikin:
-![image](https://github.com/srvasanthan33/Inverse-kinematic-modeling-using-robo-analyzer-/assets/102546622/c384773b-da2c-4d27-9414-e6684d305bce)
-4. Set Parameters:
-![image](https://github.com/srvasanthan33/Inverse-kinematic-modeling-using-robo-analyzer-/assets/102546622/8679da68-62b9-44d7-a9df-7d8e32626023)
-5.Click Fkin and play:
-![image](https://github.com/srvasanthan33/Inverse-kinematic-modeling-using-robo-analyzer-/assets/102546622/9dda2f0b-6582-41dd-961c-00cf0eef07f4)
 
+1. Open Robo Analyzer application 
+![image](https://github.com/srvasanthan33/Forward-kinematics-using-robot-analyzer/assets/102546622/a80c1021-a5ed-416a-9cbc-d5b4febf2a28)
+2. Change DOF to 6
+![image](https://github.com/srvasanthan33/Forward-kinematics-using-robot-analyzer/assets/102546622/f9f84a07-a6cc-4b74-a84b-bd1aef80ad95)
+3. Set Parameters
+![image](https://github.com/srvasanthan33/Forward-kinematics-using-robot-analyzer/assets/102546622/125c0588-ef80-40da-8d90-b37298ce1822)
+4. Click Fkin to simulate
+![image](https://github.com/srvasanthan33/Forward-kinematics-using-robot-analyzer/assets/102546622/d1b49fe4-30f3-4362-a8f5-02b152e5981a)
+5. Plot the graphs
+![image](https://github.com/srvasanthan33/Forward-kinematics-using-robot-analyzer/assets/102546622/ca7ad229-4ff8-47d9-92f2-73a1236c36bd)
 
 
 
@@ -55,60 +51,50 @@ Finally, inverse kinematics algorithms calculate the exact position of each of t
 
 
 ### SIMULATION 
- 
- ![image](https://github.com/srvasanthan33/Inverse-kinematic-modeling-using-robo-analyzer-/assets/102546622/0ab66b0c-5105-4904-995b-41145411d70f)
+ ![image](https://github.com/srvasanthan33/Forward-kinematics-using-robot-analyzer/assets/102546622/2b6142af-4575-4610-bcd4-158c44ff709a)
 
- 
- 
- 
- 
+
  
  ### PLOT 
- 
- 
- Link 1:
- ![image](https://github.com/srvasanthan33/Inverse-kinematic-modeling-using-robo-analyzer-/assets/102546622/d3474ea7-b3c8-46ff-a4b7-1324bd2c59e6)
- Link 2:
- ![image](https://github.com/srvasanthan33/Inverse-kinematic-modeling-using-robo-analyzer-/assets/102546622/d5fa73ab-c9bb-48b9-9a7c-ba7824cbae3b)
-Link 3:
-![image](https://github.com/srvasanthan33/Inverse-kinematic-modeling-using-robo-analyzer-/assets/102546622/38a0bbca-25f6-4a3e-92c4-af8ece297f42)
+ **Links**
+  Link 1:
+  ![image](https://github.com/srvasanthan33/Forward-kinematics-using-robot-analyzer/assets/102546622/39d8df4c-be4e-4579-95b8-df6d1b4d8519)
+Link2 :
+![image](https://github.com/srvasanthan33/Forward-kinematics-using-robot-analyzer/assets/102546622/2f44d08d-ec0a-44ce-ba30-a38731055332)
 
-Joints :
-Joint 1:
-![image](https://github.com/srvasanthan33/Inverse-kinematic-modeling-using-robo-analyzer-/assets/102546622/71aadf80-92e7-4c77-b4be-e0c9859ac69a)
+Link 3:
+![image](https://github.com/srvasanthan33/Forward-kinematics-using-robot-analyzer/assets/102546622/d789f01c-02ad-4603-b009-4834225f4e14)
+Link 4:
+![image](https://github.com/srvasanthan33/Forward-kinematics-using-robot-analyzer/assets/102546622/317669de-110f-4e0f-b7a7-f50830f7e14b)
+Link 5 :
+![image](https://github.com/srvasanthan33/Forward-kinematics-using-robot-analyzer/assets/102546622/92128923-d643-4990-8f1a-dc5be0c95375)
+
+Link 6 :
+![image](https://github.com/srvasanthan33/Forward-kinematics-using-robot-analyzer/assets/102546622/ae98ca9c-5153-48fe-9acf-31e9aea2d45a)
+
+
+
+**Joints**
+
+Joint 1 :
+![image](https://github.com/srvasanthan33/Forward-kinematics-using-robot-analyzer/assets/102546622/52307390-0196-4a6e-8751-7a4976e1d77f)
+
 Joint 2:
-![image](https://github.com/srvasanthan33/Inverse-kinematic-modeling-using-robo-analyzer-/assets/102546622/db075b5b-5488-49e1-95b5-0dd8c2375958)
+![image](https://github.com/srvasanthan33/Forward-kinematics-using-robot-analyzer/assets/102546622/7bf754f0-1f9d-4b6a-bea0-8e269adfd439)
 
 Joint 3:
-![image](https://github.com/Yugendaran/Forward-kinematics-using-robot-analyzer/assets/128135616/c97d882c-b79f-47a3-a4d3-57129de3a9ff)
+![image](https://github.com/srvasanthan33/Forward-kinematics-using-robot-analyzer/assets/102546622/bb5c3e37-4643-49fb-971b-d9564b1b2ddb)
 
+Joint 4:
+![image](https://github.com/srvasanthan33/Forward-kinematics-using-robot-analyzer/assets/102546622/4a4290e2-6f14-4f5d-be43-3e97604df909)
 
+Joint 5:
+![image](https://github.com/srvasanthan33/Forward-kinematics-using-robot-analyzer/assets/102546622/7898b9cd-9dba-415d-a78c-b4979f6c6a1c)
 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
+Joint 6:
+![image](https://github.com/srvasanthan33/Forward-kinematics-using-robot-analyzer/assets/102546622/cbd9e2a2-f883-4a01-b7d9-7dd3e057151e)
 
 
 ### RESULTS :  
-Thus  the inverse kinematics using DH parameters for a 3 dof planer and 3 dof articulated robot using roboanalyzer and polt the graph of joint angle for a given  input end effector position has been analysed.
+
+The forward kinematics using DH paramerters for a 4 and 6 dof robot using roboanalyzer and polt the graph for link cordinates and joint angles has been analysed
